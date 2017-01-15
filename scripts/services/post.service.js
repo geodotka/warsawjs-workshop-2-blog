@@ -7,7 +7,7 @@
 export class PostService {
 
     static list() {
-        return $.get('posts')
+        return $.get('posts?_sort=id&_order=DESC')
     }
 
     static create(data) {
