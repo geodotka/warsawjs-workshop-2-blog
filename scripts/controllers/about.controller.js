@@ -1,11 +1,11 @@
 import routie from '../libs/routie.js';
 import {PostService} from '../services/post.service.js';
-import {PostListComponent} from '../components/post-list.component.js';
+import {AboutComponent} from '../components/about.component.js';
 
 let $page = document.getElementById('page');
 
-routie('', controller);
+routie('o-mnie', controller);
 
 export function controller() {
-    PostListComponent.render({posts:[]}, $page)
+    AboutComponent.render({posts:[]}, $page)
 }
