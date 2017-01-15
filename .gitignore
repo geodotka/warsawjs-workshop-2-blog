@@ -1,1 +1,8 @@
+# FOLDERS
 node_modules
+
+# DATA BASE
+db.json
+
+# LOGS
+npm-debug.log
