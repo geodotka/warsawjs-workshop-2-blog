@@ -11,7 +11,10 @@ export class PostComponent extends Component {
 
     init() {
         this.$form = this.$el.querySelector('form');
-        this.$form.addEventListener('submit', this.onSubmit.bind(this))
+        this.$form.addEventListener('submit', this.onSubmit.bind(this));
+
+        this.$el.querySelector('#delete-post').addEventListener(
+            'click', this.destroy.bind(this))
     }
 
     onSubmit(e) {
@@ -22,7 +25,7 @@ export class PostComponent extends Component {
             results[key] = value;
         });
         results.postId = this.data.post.id;
-        PostService.addComments(results);
+        PostService.addComment(results);
         window.location.reload();
 //        PostService.addComments(results).then(comment=>{
 //            this.data.comments.unshift(results.body)
@@ -31,6 +34,7 @@ export class PostComponent extends Component {
     }
 
     destroy() {
-
+        PostService.deletePost(this.data.post.id);
+        routie('')
     }
 }

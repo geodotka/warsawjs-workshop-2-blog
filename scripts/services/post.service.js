@@ -22,7 +22,15 @@ export class PostService {
         return $.get('comments?postId=' + id)
     }
 
-    static addComments(data) {
+    static addComment(data) {
         return $.post('comments', data)
+    }
+
+    static deletePost(id) {
+        // delete post and related comments
+        $.ajax({
+            'url': 'posts/' + id,
+            'type': 'DELETE'
+        });
     }
 }
