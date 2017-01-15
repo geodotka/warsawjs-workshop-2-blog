@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
@@ -59,6 +59,16 @@
 		</h5>
 
 		<p>{{post.text}}</p>
+
+		<p>Komentarze</p>
+		{{#post.comments}}
+			<p>{{body}}</p>
+		{{/post.comments}}
+
+		<form data-post-id="{{post.id}}">
+			<textarea name="body"></textarea>
+			<input type="submit" value="Dodaj komentarz" />
+		</form>
 	</article>
 </script>
 
