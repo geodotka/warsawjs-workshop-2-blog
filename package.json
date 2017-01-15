@@ -4,6 +4,7 @@
   "description": "geodotka blog",
   "main": "index.js",
   "scripts": {
+    "api": "json-server db.json --static ./ --port 8080",
     "start": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/geodotka/warsawjs-workshop-2-blog#readme",
   "devDependencies": {
+    "json-server": "^0.9.4",
     "live-server": "^1.2.0"
   }
 }
