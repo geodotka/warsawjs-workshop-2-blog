@@ -30,25 +30,18 @@
 
 <!-- POST LIST -->
 <script id="template-post-list" type="text/html" class="container">
-	<ul class="collection with-header">
-		<li class="collection-header"><h4>Recent posts</h4></li>
-		<li class="collection-item avatar">
-			<i class="material-icons circle">folder</i>
-			<span class="title">Title</span>
-			<p>First Line <br>
-				Second Line
-			</p>
-			<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-		</li>
-		<li class="collection-item avatar">
-			<i class="material-icons circle green">insert_chart</i>
-			<span class="title">Title</span>
-			<p>First Line <br>
-				Second Line
-			</p>
-			<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-		</li>
-	</ul>
+    <ul class="collection with-header">
+        <li class="collection-header"><h4>Recent posts</h4></li>
+        {{#posts}}
+        <li class="collection-item avatar">
+            <a href="#post/{{id}}">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">{{title}}</span>
+            </a>
+            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        {{/posts}}
+    </ul>
 </script>
 
 <!-- POST DETAILS-->
@@ -56,7 +49,7 @@
 	<article class="card-panel">
 		<h5>
 			<a href="#">
-				Tytuł
+				{{post.title}}
 			</a>
 
 			<a href="#">
@@ -64,7 +57,7 @@
 			</a>
 		</h5>
 
-		<p>Treść posta...</p>
+		<p>{{post.text}}</p>
 	</article>
 </script>
 
