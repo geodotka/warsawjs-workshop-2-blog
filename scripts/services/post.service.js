@@ -7,17 +7,11 @@ let posts = [
 export class PostService {
 
     static list() {
-        return new Promise((resolve, reject) => {
-            resolve(posts);
-        })
+        return $.get('posts')
     }
 
     static create(data) {
-        data.id = posts.length+1;
-        posts.unshift(data);
-        return new Promise((resolve, reject) => {
-            resolve(data);
-        })
+        $.post('posts', data)
     }
 
     static get(id) {
