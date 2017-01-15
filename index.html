@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+
+	<script src="scripts/libs/routie.js"></script>
 </head>
 <body>
 
@@ -26,7 +28,7 @@
 <div id="page" class="container"></div>
 
 <!-- POST LIST -->
-<section id="template-post-list" type="text/html" class="container">
+<script id="template-post-list" type="text/html" class="container">
     <ul class="collection with-header">
         <li class="collection-header"><h4>Recent posts</h4></li>
         <li class="collection-item avatar">
@@ -46,10 +48,10 @@
             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
         </li>
     </ul>
-</section>
+</script>
 
 <!-- POST DETAILS-->
-<section id="template-post" type="text/html" class="container">
+<script id="template-post" type="text/html" class="container">
     <article class="card-panel">
         <h5>
             <a href="#">
@@ -63,10 +65,10 @@
 
         <p>Treść posta...</p>
     </article>
-</section>
+</script>
 
 <!-- POST FORM -->
-<section id="template-post-form" class="container">
+<script id="template-post-form" type="text/html" class="container">
 
     <section class="card-panel">
         <h1>Dodaj post</h1>
@@ -99,7 +101,7 @@
         </form>
     </section>
 
-</section>
+</script>
 
 <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.41/system.js"></script>

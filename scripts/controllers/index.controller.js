@@ -1,8 +1,11 @@
+import routie from '../libs/routie.js';
 import {PostService} from '../services/post.service.js';
 
-export const path = '/index.html';
+routie('', controller);
 
-export function index() {
-    console.log('run index');
-    PostService.create({'sample': 'data'})
+export function controller() {
+
+    let template = document.querySelector('#template-post-list').innerHTML;
+
+    document.getElementById('page').innerHTML = template;
 }
