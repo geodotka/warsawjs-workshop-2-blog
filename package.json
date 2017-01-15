@@ -1,0 +1,26 @@
+{
+  "name": "warsawjs-workshop-2-blog",
+  "version": "1.0.0",
+  "description": "geodotka blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geodotka/warsawjs-workshop-2-blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "geodotka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geodotka/warsawjs-workshop-2-blog/issues"
+  },
+  "homepage": "https://github.com/geodotka/warsawjs-workshop-2-blog#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
