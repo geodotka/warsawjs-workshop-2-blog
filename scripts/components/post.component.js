@@ -30,7 +30,6 @@ export class PostComponent extends Component {
 //        PostService.addComments(results).then(comment=>{
 //            this.data.comments.unshift(results.body)
 //        });
-        return results
     }
 
     destroy() {
